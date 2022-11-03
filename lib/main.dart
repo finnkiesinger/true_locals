@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:true_locals/app.dart';
 import 'package:true_locals/screens/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await App.initialize();
   runApp(const TrueLocalsApp());
 }
 
@@ -11,6 +14,7 @@ class TrueLocalsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
   }
