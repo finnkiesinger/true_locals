@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:true_locals/app.dart';
 import 'package:true_locals/screens/home_screen.dart';
 
@@ -15,7 +16,10 @@ class TrueLocalsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.dark,
+        child: HomeScreen(),
+      ),
     );
   }
 }
