@@ -32,7 +32,7 @@ class _AddPlaceButtonState extends State<AddPlaceButton> {
                 width: 8,
               ),
             ),
-            child: Center(
+            child: const Center(
               child: Icon(
                 Icons.add_rounded,
                 size: 64,
